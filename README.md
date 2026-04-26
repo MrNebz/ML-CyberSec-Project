@@ -189,6 +189,12 @@ Push the image:
 docker push mathieumoussa/ciciot2023-ids:latest
 ```
 
+The public image is available on Docker Hub:
+
+```text
+https://hub.docker.com/repository/docker/mathieumoussa/ciciot2023-ids
+```
+
 Anyone can then run:
 
 ```bash
