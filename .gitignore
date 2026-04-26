@@ -1,34 +1,56 @@
-# Python
+# Python caches and build output
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.so
+build/
+dist/
+*.egg-info/
 
-# Virtual environments
-venv/
+# Virtual environments and local config
 .venv/
+venv/
 env/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Environment files
 .env
+.env.*
 
-# Data folders
-data/raw/
-data/interim/
-data/processed/
-
-# Model artifacts
-artifacts/
-models/
-outputs/
+# Jupyter runtime noise
+.ipynb_checkpoints/
 
 # OS/editor noise
 .DS_Store
 Thumbs.db
 .vscode/
+.idea/
 
-# Logs
+# Logs and runtime databases
 *.log
+data/monitor/
+*.db
+*.sqlite
+*.sqlite3
+
+# Data and model artifacts
+#
+# The runnable demo is distributed through the public Docker Hub image, which
+# already contains the required runtime model artifacts and processed splits.
+# Keep GitHub source-focused and avoid large files/GitHub size limits.
+data/artifacts/
+data/processed/
+data/raw/
+data/subset/
+data/interim/
+
+# Keep small drift demo CSVs in GitHub.
+!data/
+!data/drift/
+!data/drift/step7/
+!data/drift/step7/Backdoor_Malware.pcap.csv
+!data/drift/step7/X_drift_test.csv
+!data/drift/step7/y_drift_test.csv
+
+# Local-only experiment/output folders at the repository root
+/artifacts/
+/models/
+/outputs/
